@@ -7,6 +7,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Initializes a launch window with a button for the triangle exercises
+ * and a button for the quadratic equation exercises.
+ */
 public class StartScreen {
 
 	private JFrame frmMathRandomizer;

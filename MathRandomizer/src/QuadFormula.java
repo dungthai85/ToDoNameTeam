@@ -21,7 +21,7 @@ public class QuadFormula {
 			return oneRoot;
 
 		} else {
-			twoRoots[0] = (Math.sqrt(-1*d))/(2*a);
+			twoRoots[0] = -b/(2*a);
 			twoRoots[1] = (Math.sqrt(-1*d))/(2*a);
 			return twoRoots;
 		}
