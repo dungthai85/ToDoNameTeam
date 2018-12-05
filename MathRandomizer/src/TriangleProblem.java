@@ -61,63 +61,63 @@ public class TriangleProblem {
 		lblCm.setBounds(293, 21, 265, 309);
 		frmTriangleExercise.getContentPane().add(lblCm);
 
-		JLabel lblAngleA = new JLabel("A =");
+		JLabel lblAngleA = new JLabel("Angle A =");
 		lblAngleA.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblAngleA.setBounds(293, 361, 49, 25);
+		lblAngleA.setBounds(293, 361, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblAngleA);
 
-		JLabel lblAngleB = new JLabel("B =");
+		JLabel lblAngleB = new JLabel("Angle B =");
 		lblAngleB.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblAngleB.setBounds(293, 413, 46, 25);
+		lblAngleB.setBounds(293, 413, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblAngleB);
 
-		JLabel lblAngleC = new JLabel("C =");
+		JLabel lblAngleC = new JLabel("Angle C =");
 		lblAngleC.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblAngleC.setBounds(293, 461, 46, 25);
+		lblAngleC.setBounds(293, 461, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblAngleC);
 
-		JLabel lblLengthA = new JLabel("a =");
+		JLabel lblLengthA = new JLabel("Side a =");
 		lblLengthA.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblLengthA.setBounds(293, 508, 46, 25);
+		lblLengthA.setBounds(293, 508, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblLengthA);
 
-		JLabel lblLengthB = new JLabel("b =");
+		JLabel lblLengthB = new JLabel("Side b =");
 		lblLengthB.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblLengthB.setBounds(293, 553, 46, 25);
+		lblLengthB.setBounds(293, 553, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblLengthB);
 
-		JLabel lblLengthC = new JLabel("c =");
+		JLabel lblLengthC = new JLabel("Side c =");
 		lblLengthC.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblLengthC.setBounds(293, 594, 46, 25);
+		lblLengthC.setBounds(293, 594, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblLengthC);
 
 		textFieldAngleA = new JTextField();
-		textFieldAngleA.setBounds(337, 367, 86, 20);
+		textFieldAngleA.setBounds(400, 367, 86, 20);
 		frmTriangleExercise.getContentPane().add(textFieldAngleA);
 		textFieldAngleA.setColumns(10);
 
 		textFieldAngleB = new JTextField();
-		textFieldAngleB.setBounds(337, 419, 86, 20);
+		textFieldAngleB.setBounds(400, 419, 86, 20);
 		frmTriangleExercise.getContentPane().add(textFieldAngleB);
 		textFieldAngleB.setColumns(10);
 
 		textFieldAngleC = new JTextField();
-		textFieldAngleC.setBounds(337, 467, 86, 20);
+		textFieldAngleC.setBounds(400, 467, 86, 20);
 		frmTriangleExercise.getContentPane().add(textFieldAngleC);
 		textFieldAngleC.setColumns(10);
 
 		textFieldLengthA = new JTextField();
-		textFieldLengthA.setBounds(337, 514, 86, 20);
+		textFieldLengthA.setBounds(400, 514, 86, 20);
 		frmTriangleExercise.getContentPane().add(textFieldLengthA);
 		textFieldLengthA.setColumns(10);
 
 		textFieldLengthB = new JTextField();
-		textFieldLengthB.setBounds(337, 559, 86, 20);
+		textFieldLengthB.setBounds(400, 559, 86, 20);
 		frmTriangleExercise.getContentPane().add(textFieldLengthB);
 		textFieldLengthB.setColumns(10);
 
 		textFieldLengthC = new JTextField();
-		textFieldLengthC.setBounds(337, 600, 86, 20);
+		textFieldLengthC.setBounds(400, 600, 86, 20);
 		frmTriangleExercise.getContentPane().add(textFieldLengthC);
 		textFieldLengthC.setColumns(10);
 
