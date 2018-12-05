@@ -9,6 +9,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Initializes a window with a model triangle with side length and angles
+ * for the user to solve.
+ */
 public class TriangleProblem {
 
 	private JFrame frmTriangleExercise;

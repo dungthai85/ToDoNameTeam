@@ -1,3 +1,6 @@
+import java.text.DecimalFormat;
+import java.util.Random;
+
 /**
  * @author James Wedum
  * @date 11/25/2018
@@ -7,9 +10,6 @@
  * 	3 doubles creates quadratic in standard form.  String argument 
  *  parses string into quadratic.
  * */
-import java.text.DecimalFormat;
-import java.util.Random;
-
 public class Quadratic {
 	private final int A, B, C;
 	
