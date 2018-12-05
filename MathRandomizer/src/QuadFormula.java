@@ -3,6 +3,14 @@ public class QuadFormula {
 	double x1, x2;
 	String ix1, ix2;
 	boolean isImagine = false;
+	
+	/**
+	 * The Quadratic Formula
+	 * @param a of (a)x^2+bx+c
+	 * @param b of ax^2+(b)x+c
+	 * @param c of ax^2+bx+(c)
+	 * @return
+	 */
 	public double[] quadForm (double a, double b, double c) {	
 
 		double d = (b * b) - (4 * a * c);
@@ -28,6 +36,12 @@ public class QuadFormula {
 
 	}
 	
+	/**
+	 * The Quadratic Solution
+	 * @param a of (a)x^2+bx+c
+	 * @param b of ax^2+(b)x+c
+	 * @param c of ax^2+bx+(c)
+	 */
 	public void quadSoln (double a, double b, double c) {
 		double d = (b * b) - (4 * a * c);	
 

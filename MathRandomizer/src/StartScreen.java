@@ -22,7 +22,7 @@ public class StartScreen {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
-			System.exit(0);
+			System.exit(1);
 		}
 	}
 
@@ -54,7 +54,7 @@ public class StartScreen {
 				} catch (Exception E) {
 					JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 					E.printStackTrace();
-					System.exit(0);
+					System.exit(1);
 				}
 			}
 		});
@@ -73,7 +73,7 @@ public class StartScreen {
 				catch (Exception E) {
 					JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 					E.printStackTrace();
-					System.exit(0);
+					System.exit(1);
 				}
 			}
 		});
