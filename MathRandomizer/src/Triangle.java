@@ -168,7 +168,7 @@ public class Triangle {
 	private boolean isValidTriangle() {
 		return true;
 	}
-
+	//some bullshit
 	/**
 	 * 
 	 * @param selection
