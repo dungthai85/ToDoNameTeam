@@ -1,7 +1,14 @@
 
 public class AASTriangles {
 	
-public void aasSolver(double angleA, double angleB, double side, char whichSide) {
+	/**
+	 * 
+	 * @param angleA
+	 * @param angleB
+	 * @param side
+	 * @param whichSide
+	 */
+	public void aasSolver(double angleA, double angleB, double side, char whichSide) {
     double side1, side2;
     double lastAngle = 180 - angleA - angleB;
     if (whichSide == 'a') {
