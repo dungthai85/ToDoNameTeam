@@ -30,7 +30,7 @@ public class TriangleProblem {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
-			System.exit(0);
+			System.exit(1);
 		}
 	}
 
@@ -55,26 +55,41 @@ public class TriangleProblem {
 		lblHowTo.setText("<html>Enter the correct angles and side lengths for the given triangle.</html>");
 
 		// TODO Generate side lengths and angles, add them to their textFields, and set editable for those textFields to false
-		JLabel lblCm = new JLabel("");
-		lblCm.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCm.setIcon(new ImageIcon(TriangleProblem.class.getResource("/resources/Triangle.png")));
-		lblCm.setBounds(293, 21, 265, 309);
-		frmTriangleExercise.getContentPane().add(lblCm);
+		JLabel lblTriangle = new JLabel("");
+		lblTriangle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTriangle.setIcon(new ImageIcon(TriangleProblem.class.getResource("/resources/Triangle.png")));
+		lblTriangle.setBounds(293, 21, 265, 309);
+		frmTriangleExercise.getContentPane().add(lblTriangle);
 
 		JLabel lblAngleA = new JLabel("Angle A =");
 		lblAngleA.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblAngleA.setBounds(293, 361, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblAngleA);
+		
+		JLabel lblDegreeA = new JLabel("°");
+		lblDegreeA.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblDegreeA.setBounds(490, 361, 20, 25);
+		frmTriangleExercise.getContentPane().add(lblDegreeA);
 
 		JLabel lblAngleB = new JLabel("Angle B =");
 		lblAngleB.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblAngleB.setBounds(293, 413, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblAngleB);
+		
+		JLabel lblDegreeB = new JLabel("°");
+		lblDegreeB.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblDegreeB.setBounds(490, 413, 20, 25);
+		frmTriangleExercise.getContentPane().add(lblDegreeB);
 
 		JLabel lblAngleC = new JLabel("Angle C =");
 		lblAngleC.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblAngleC.setBounds(293, 461, 125, 25);
 		frmTriangleExercise.getContentPane().add(lblAngleC);
+		
+		JLabel lblDegreeC = new JLabel("°");
+		lblDegreeC.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblDegreeC.setBounds(490, 461, 20, 25);
+		frmTriangleExercise.getContentPane().add(lblDegreeC);
 
 		JLabel lblLengthA = new JLabel("Side a =");
 		lblLengthA.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -129,12 +144,12 @@ public class TriangleProblem {
 				} catch (Exception E) {
 					JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 					E.printStackTrace();
-					System.exit(0);
+					System.exit(1);
 				}
 			}
 		});
 		btnCheck.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		btnCheck.setBounds(390, 641, 89, 23);
+		btnCheck.setBounds(400, 641, 86, 23);
 		frmTriangleExercise.getContentPane().add(btnCheck);
 	}
 

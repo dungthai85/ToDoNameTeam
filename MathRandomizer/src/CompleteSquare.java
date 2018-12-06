@@ -1,4 +1,3 @@
-
 public class CompleteSquare {
 	double rightHS, d, e, x1, x2;
 

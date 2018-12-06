@@ -22,7 +22,7 @@ public class QuadraticProblem {
 	private JLabel lblA;
 	private JLabel lblB;
 	private JLabel lblC;
-	private double[] fieldValues = new double[3];
+	private Quadratic fields;
 	private JLabel lblRoot1;
 	private JLabel lblRoot2;
 	private JLabel lblCorrect;
@@ -37,6 +37,7 @@ public class QuadraticProblem {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
+			System.exit(1);
 		}
 	}
 
@@ -59,7 +60,6 @@ public class QuadraticProblem {
 		// TODO Add to lblHowTo
 		lblHowTo.setText("<html>Solve the quadratic equation and type each answer into a text box. Each answer must have two"
 				+ " numbers right of the decimal point, except for trailing zeros.</html>");
-
 		JLabel lblEquation = new JLabel("ax^2 + bx + c = 0");
 		lblEquation.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEquation.setFont(new Font("Tahoma", Font.PLAIN, 24));
@@ -87,7 +87,7 @@ public class QuadraticProblem {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					QuadFormula form = new QuadFormula();
-					double[] solution = form.quadForm(fieldValues[0], fieldValues[1], fieldValues[2]);
+					double[] solution = form.quadForm(fields.get("A"), fields.get("B"), fields.get("C"));
 					DecimalFormat df = new DecimalFormat("###.00");
 					solution[0] = Double.parseDouble(df.format(solution[0])); // Shortens the numbers
 					if (solution.length > 2) { // The solution has two roots
@@ -107,12 +107,19 @@ public class QuadraticProblem {
 					double answer2 = Double.parseDouble(answerString2);
 					double answer1i = 0;
 					double answer2i = 0;
-					if (answerString1i.equals("") == false && answerString2i.equals("") == false) {
+					if (answerString1i.equals("") == false) { // The user entered an imaginary part to the root
 						answer1i = Double.parseDouble(answerString1i);
+						
+					}
+					if (answerString2i.equals("") == false) {
 						answer2i = Double.parseDouble(answerString2i);
 					}
 					if (solution.length < 3 || solution[2] > 0) { // The answer has one or two real roots
-						if ((answer1 == solution[0] && answer2 == solution[1]) || (answer2 == solution[0] && answer1 == solution[1])) {
+						if (answer1i != 0 || answer2i != 0) {
+							// The user entered at least one imaginary part to the roots when the roots only have real parts
+							lblIncorrect.setVisible(true);
+							lblCorrect.setVisible(false);
+						} else if ((answer1 == solution[0] && answer2 == solution[1]) || (answer2 == solution[0] && answer1 == solution[1])) {
 							// The answer is correct
 							lblCorrect.setVisible(true);
 							lblIncorrect.setVisible(false);
@@ -149,7 +156,7 @@ public class QuadraticProblem {
 				} catch (Exception E) {
 					JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 					E.printStackTrace();
-					System.exit(0);
+					System.exit(1);
 				}
 			}
 		});
@@ -194,13 +201,10 @@ public class QuadraticProblem {
 		frmQuadraticExercise.getContentPane().add(lblIncorrect);
 		lblIncorrect.setVisible(false);
 
-		Quadratic fields = new Quadratic(); // Generates coefficients
-		fieldValues[0] = fields.get("A");
-		fieldValues[1] = fields.get("B");
-		fieldValues[2] = fields.get("C");
-		lblA.setText("A = " + fieldValues[0]); // Puts the coefficients into their labels
-		lblB.setText("B = " + fieldValues[1]);
-		lblC.setText("C = " + fieldValues[2]);
+		fields = new Quadratic(); // Generates coefficients
+		lblA.setText("A = " + fields.get("A")); // Puts the coefficients into their labels
+		lblB.setText("B = " + fields.get("B"));
+		lblC.setText("C = " + fields.get("C"));
 
 		JButton btnNewProblem = new JButton("New problem");
 		btnNewProblem.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -215,17 +219,14 @@ public class QuadraticProblem {
 					textFieldAnswer2.setText("");
 					textFieldAnswer1i.setText("");
 					textFieldAnswer2i.setText("");
-					Quadratic fields = new Quadratic(); // Generates new coefficients
-					fieldValues[0] = fields.get("A");
-					fieldValues[1] = fields.get("B");
-					fieldValues[2] = fields.get("C");
-					lblA.setText("A = " + fieldValues[0]); // Puts the new coefficients into their labels
-					lblB.setText("B = " + fieldValues[1]);
-					lblC.setText("C = " + fieldValues[2]);
+					fields = new Quadratic(); // Generates new coefficients
+					lblA.setText("A = " + fields.get("A")); // Puts the new coefficients into their labels
+					lblB.setText("B = " + fields.get("B"));
+					lblC.setText("C = " + fields.get("C"));
 				} catch (Exception E) {
 					JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 					E.printStackTrace();
-					System.exit(0);
+					System.exit(1);
 				}
 			}
 		});
@@ -252,7 +253,7 @@ public class QuadraticProblem {
 
 		textFieldAnswer2i = new JTextField();
 		textFieldAnswer2i.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		textFieldAnswer2i.setBounds(458, 371, 87, 20);
+		textFieldAnswer2i.setBounds(458, 371, 89, 20);
 		frmQuadraticExercise.getContentPane().add(textFieldAnswer2i);
 		textFieldAnswer2i.setColumns(10);
 
