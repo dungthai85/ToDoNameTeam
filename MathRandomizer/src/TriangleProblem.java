@@ -508,6 +508,20 @@ public class TriangleProblem {
 					} else if (lengths == 1 && angles == 2) {
 						SAS = false; // The triangle is AAS
 					} else { // An error occurred
+/****************************************************
+ * There is some kind of bug that is randomly blowing up here.
+ * Takes between 5 and 100 generates to encounter, but the program
+ * terminates for unknown triangle.  Checked the constructors and
+ * found no issue, and whatever it is is making it past my
+ * isValidTriangle method.  I've only seen it occur on AAS
+ * triangles, but I can't find a pattern other than that.
+ * 
+ * James - 12/7/18 1:14AM
+ * ********************************************
+ * Bug appears to be fixed.
+ * 
+ * James - 12/7/18 1:42AM
+ * ************************************************/
 						throw new RuntimeException("Unable to identify the type of triangle generated.");
 					}
 					isGenerated = true;
