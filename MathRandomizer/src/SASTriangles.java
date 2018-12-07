@@ -1,6 +1,6 @@
 
 public class SASTriangles {
-	public void sasSolver(double side1, double angle, double side2) {
+	public double[] sasSolver(double side1, double angle, double side2) {
 		double lastSide, smallAngle, bigAngle, smallSide;
 		lastSide = (Math.sqrt( (side1*side1) + (side2*side2) - (2*side1*side2*Math.cos(angle))));
 		if ( side1 < side2) {
@@ -10,7 +10,8 @@ public class SASTriangles {
 		}
 		smallAngle = Math.asin(Math.sin(angle)/smallSide*smallSide);
 		bigAngle = 180 - angle - smallAngle;
-
-		System.out.println("The missing side is " + lastSide + ", the two missing angles are " + smallAngle + " and " + bigAngle + ".");
+		double[] missingValues = {lastSide, smallAngle, bigAngle};
+		//System.out.println("The missing side is " + lastSide + ", the two missing angles are " + smallAngle + " and " + bigAngle + ".");
+		return missingValues;
 	}
 }

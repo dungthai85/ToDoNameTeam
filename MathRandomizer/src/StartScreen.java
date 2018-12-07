@@ -50,7 +50,6 @@ public class StartScreen {
 					new TriangleProblem();
 					TriangleProblem.main(null); // Opens a triangle exercise window
 					frmMathRandomizer.setVisible(false);
-					// TODO Add a way for the user to return to the start screen
 				} catch (Exception E) {
 					JOptionPane.showMessageDialog(null, "The program encountered an error. Terminating.", "Error", JOptionPane.ERROR_MESSAGE);
 					E.printStackTrace();

@@ -57,7 +57,6 @@ public class QuadraticProblem {
 		lblHowTo.setVerticalAlignment(SwingConstants.TOP);
 		lblHowTo.setBounds(10, 11, 246, 125);
 		frmQuadraticExercise.getContentPane().add(lblHowTo);
-		// TODO Add to lblHowTo
 		lblHowTo.setText("<html>Solve the quadratic equation and type each answer into a text box. Each answer must have two"
 				+ " numbers right of the decimal point, except for trailing zeros.</html>");
 		JLabel lblEquation = new JLabel("ax^2 + bx + c = 0");
